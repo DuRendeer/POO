@@ -12,7 +12,7 @@ public class Aluno{
      public String getNome(){
         return nome;
      }
-     public String getmMtricula(){
+     public String getMatricula(){
         return matricula;
      }
      public String getCurso(){
