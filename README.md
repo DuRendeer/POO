@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/DuRendeer/POO?style=for-the-badge)
 
-**Repositório das atividades desenvolvidas  para o Professor Moacir**
+**Repositório das atividades desenvolvidas  para o Professor Moaca 🍐**
 
 ---
 
@@ -24,6 +24,7 @@ POO
 ├── Atividades Slide 5           # Herança e polimorfismo
 ├── Atividades Slide 6           # Hierarquia de classes
 └── Atividades Slide 7           # Exercícios avançados
+└── Atividades Slide 8           # Exercícios Abstratos
 ```
 
 
