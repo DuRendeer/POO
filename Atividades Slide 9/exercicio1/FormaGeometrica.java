@@ -1,0 +1,3 @@
+interface FormaGeometrica {
+    double calcularArea();
+}
