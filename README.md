@@ -25,7 +25,8 @@ POO
 ├── Atividades Slide 6           # Hierarquia de classes
 ├── Atividades Slide 7           # Exercícios avançados
 ├── Atividades Slide 8           # Exercícios Abstratos
-└── Atividades Slide 9           # Exercícios Interfaces e o Modificador static
+├── Atividades Slide 9           # Exercícios Interfaces e o Modificador static
+└── Atividades Slide 10          # Tratamento de Exceções
 ```
 
 
