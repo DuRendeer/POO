@@ -12,17 +12,18 @@
 
   2. Refatoração com Injeção de Dependência
 
-  public class Relatorio {
-      private BancoDeDados bd;
 
-      public Relatorio(BancoDeDados bd) {
+
+    public class Relatorio {
+      private BancoDeDados bd;
+       public Relatorio(BancoDeDados bd) {
           this.bd = bd;
       }
 
       void gerar() {
           bd.lerDados();
       }
-  }
+    }
 
   Agora a dependencia vem de fora, o Relatorio nao decide qual banco usar, só sabe q precisa de um. Fica mais facil
   testar e trocar o banco dps se precisar.
