@@ -26,7 +26,10 @@ POO
 ├── Atividades Slide 7           # Exercícios avançados
 ├── Atividades Slide 8           # Exercícios Abstratos
 ├── Atividades Slide 9           # Exercícios Interfaces e o Modificador static
-└── Atividades Slide 10          # Tratamento de Exceções
+├── Atividades Slide 10          # Tratamento de Exceções
+├── Atividades Slide 11          # Acoplamento e Coesão
+├── Atividades Slide 12          # Princípios SOLID
+└── Atividades Slide 13          # Composição, Agregação,Enum e Object Calisthenics
 ```
 
 

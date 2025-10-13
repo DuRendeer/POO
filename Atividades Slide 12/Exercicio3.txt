@@ -1,0 +1,10 @@
+O DIP basicamente inverte quem depende de quem. Ao inves da classe principal conhecer
+a implementacao concreta tipo MySQL ou MongoDB, ela so conhece uma interface abstrata.
+
+Isso reduz o acoplamento porque a classe nao precisa saber os detalhes de como funciona
+por baixo dos panos. Se amanha eu quiser trocar MySQL por PostgreSQL, a classe que usa
+o banco continua do mesmo jeito, nao muda nada.
+
+Pra testes entao, é muito mais facil da pra criar uma implementacao fake
+da interface que simula o banco sem precisar subir um banco de verdade os testes ficam
+rapidos e confiaveis, sem depender de conexão externa.
