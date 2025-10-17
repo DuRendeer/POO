@@ -1,0 +1,5 @@
+A Regra 3 envolva primitivos em objetos porque força a dar significado real pros dados.
+Tipo, em vez de usar double pra tudo cria uma classe Dinheiro, Em vez de String pro CPF, cria classe CPF com validação.
+
+Basicamente obriga a pensar no dominio do problema, n só em tipos genéricos o codigo fica bem mais seguro e 
+dificulta erros bestas tipo somar coisas incompatíveis.
