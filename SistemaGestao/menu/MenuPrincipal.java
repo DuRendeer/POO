@@ -6,6 +6,8 @@ import excecoes.*;
 import repositorio.*;
 import servico.ProcessadorPedidos;
 import java.util.Scanner;
+import dados.JsonDatabase;
+
 
 public class MenuPrincipal {
     private Scanner scanner;
@@ -13,14 +15,23 @@ public class MenuPrincipal {
     private ProdutoRepositorio produtoRepo;
     private PedidoRepositorio pedidoRepo;
     private ProcessadorPedidos processador;
+    private JsonDatabase jsonDb;
+
 
     public MenuPrincipal() {
-        this.scanner = new Scanner(System.in);
-        this.clienteRepo = new ClienteRepositorio();
-        this.produtoRepo = new ProdutoRepositorio();
-        this.pedidoRepo = new PedidoRepositorio();
-        this.processador = new ProcessadorPedidos();
-    }
+    this.scanner = new Scanner(System.in);
+    this.clienteRepo = new ClienteRepositorio();
+    this.produtoRepo = new ProdutoRepositorio();
+    this.pedidoRepo = new PedidoRepositorio();
+    this.processador = new ProcessadorPedidos();
+    this.jsonDb = new JsonDatabase();
+
+    this.clienteRepo.carregarLista(jsonDb.carregar("clientes.json", Cliente[].class));
+    this.produtoRepo.carregarLista(jsonDb.carregar("produtos.json", Produto[].class));
+    this.pedidoRepo.carregarLista(jsonDb.carregar("pedidos.json", Pedido[].class));
+
+}
+
 
     public void iniciar() {
         Thread threadProcessamento = new Thread(processador);
@@ -95,11 +106,14 @@ public class MenuPrincipal {
             int id = clienteRepo.gerarProximoId();
             Cliente cliente = new Cliente(id, nome, email);
             clienteRepo.adicionar(cliente);
+            clienteRepo.salvar();
+
 
             System.out.println("Cliente cadastrado com sucesso! ID: " + id);
         } catch (EmailInvalidoException e) {
             System.out.println("Erro: " + e.getMessage());
         }
+        
     }
 
     private void cadastrarProduto() {
@@ -123,6 +137,8 @@ public class MenuPrincipal {
             int id = produtoRepo.gerarProximoId();
             Produto produto = new Produto(id, nome, preco, categoria);
             produtoRepo.adicionar(produto);
+            produtoRepo.salvar();
+
 
             System.out.println("Produto cadastrado com sucesso! ID: " + id);
         } catch (PrecoInvalidoException e) {
@@ -175,6 +191,8 @@ public class MenuPrincipal {
         }
 
         pedidoRepo.adicionar(pedido);
+        pedidoRepo.salvar();
+
         processador.adicionarNaFila(pedido);
         System.out.println("Pedido criado com sucesso! ID: " + pedidoId);
     }

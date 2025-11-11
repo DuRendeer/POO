@@ -13,4 +13,9 @@ public class ClienteRepositorio extends RepositorioBase<Cliente> {
         }
         return null;
     }
+
+    @Override
+    protected String getFileName() {
+        return "Cliente.json";
+    }
 }
