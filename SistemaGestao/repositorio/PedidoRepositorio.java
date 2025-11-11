@@ -13,4 +13,9 @@ public class PedidoRepositorio extends RepositorioBase<Pedido> {
         }
         return null;
     }
+
+    @Override
+    protected String getFileName() {
+        return "Pedido.json";
+    }
 }

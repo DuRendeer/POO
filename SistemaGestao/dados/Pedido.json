@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "cliente": {
+      "id": 1,
+      "nome": "johann",
+      "email": "johannsilva@gmail.com"
+    },
+    "itens": [
+      {
+        "produto": {
+          "id": 1,
+          "nome": "Melancia",
+          "preco": 80.0,
+          "categoria": "ALIMENTOS"
+        },
+        "quantidade": 5
+      }
+    ],
+    "status": "ABERTO"
+  }
+]
