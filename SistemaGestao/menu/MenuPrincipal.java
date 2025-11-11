@@ -26,9 +26,9 @@ public class MenuPrincipal {
     this.processador = new ProcessadorPedidos();
     this.jsonDb = new JsonDatabase();
 
-    this.clienteRepo.carregarLista(jsonDb.carregar("clientes.json", Cliente[].class));
-    this.produtoRepo.carregarLista(jsonDb.carregar("produtos.json", Produto[].class));
-    this.pedidoRepo.carregarLista(jsonDb.carregar("pedidos.json", Pedido[].class));
+    this.clienteRepo.carregarLista(jsonDb.carregar("dados/Cliente.json", Cliente[].class));
+    this.produtoRepo.carregarLista(jsonDb.carregar("dados/Produto.json", Produto[].class));
+    this.pedidoRepo.carregarLista(jsonDb.carregar("dados/Pedido.json", Pedido[].class));
 
 }
 
